@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useForm } from "react-hook-form"
+import { formTitle, subFormText } from '../../config/constants';
 import Collections from '../../template/Collections';
 
 interface Values {
@@ -25,8 +26,8 @@ const FormBuilder: React.FC = () => {
             onSubmit={handleSubmit(onSubmit)}
          >
             <div>
-               <p className='text-lg font-bold'>Account Name</p>
-               <p className='text-sm pb-4 italic'>Insert an account name to display the account's NFT collections</p>
+               <p className='text-lg font-bold'>{formTitle}</p>
+               <p className='text-sm pb-4 italic'>{subFormText}</p>
                <input
                   {...register('accountName')}
                   name='accountName' 

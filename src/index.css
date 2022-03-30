@@ -21,3 +21,7 @@ code {
 img {
    height: inherit;
 }
+
+.loadingIcon svg {
+   width: -webkit-fill-available;
+}

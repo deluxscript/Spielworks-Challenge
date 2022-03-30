@@ -1,12 +1,27 @@
+import { useState } from "react"
+import { BallTriangle } from 'react-loading-icons'
 
 
 interface Props {
    img: string
 }
 const ImageComponent: React.FC<Props> = ({img}) => {
+
+   const [imageLoad, setImageLoad] = useState(false)
+
+   const isLoaded: any = () => setImageLoad(true)
+   console.log(imageLoad)
    return(
       <div className="h-275 shadow-md">
-         <img src={`https://ipfs.io/ipfs/${img}`} alt="nfts" width={275} height={275} className="w-full object-scale-down"/>
+         {
+            (imageLoad && !imageLoad) ?
+               <div className="loadingIcon">
+                  <BallTriangle />
+                  <p className="pt-8">Loading ...</p>
+               </div>
+               :
+               <img src={`https://ipfs.io/ipfs/${img}`} alt="nfts" width={275} height={275} className="w-full object-scale-down" onLoad={isLoaded}/>
+         }
       </div>
    )
 }

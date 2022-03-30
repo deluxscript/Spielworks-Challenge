@@ -1,0 +1,5 @@
+export const title = 'NFTs Collections'
+export const metaDescription = 'This is a sample SEO description'
+export const formTitle = 'Account Name'
+export const subFormText = 'Insert an account name to display the account\'s NFT collections'
+export const errMessage = 'There are no collections for this account'

@@ -1,15 +1,13 @@
+import { metaDescription, title } from "../../config/constants"
 import MetaHead from "../MetaHead"
 
-interface LayoutProps {
-   title: string
- }
 
-const Layout: React.FC<LayoutProps> = ({ children, title}) => {
+const Layout: React.FC = ({ children}) => {
   return (
     <>
       <div>
          <div className="container mx-auto px-4">
-            <MetaHead title={title} />
+            <MetaHead title={title} description = {metaDescription} />
             <main className="">{children}</main>
          </div>
       </div>

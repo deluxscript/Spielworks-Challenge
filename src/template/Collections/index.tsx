@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import SingleCollection from '../../components/SingleCollection';
 import API from '../../config/api';
+import { errMessage } from '../../config/constants';
 import { Assets } from '../../types/ApiResponse/assets';
 import { AtomicAssets } from '../../types/ApiResponse/atomicassets';
 
@@ -30,7 +31,7 @@ const Collections: React.FC<NameProp> = ({accountName}) => {
    return (
       <div>
          <h1 className='text-3xl pt-4 font-bold '>Results</h1>
-         {(groupedCollection && Object.keys(groupedCollection).length === 0) ? <p>There are no collections for this account</p> :
+         {(groupedCollection && Object.keys(groupedCollection).length === 0) ? <p>{errMessage}</p> :
          (Object.entries(groupedCollection).map((collection) => (
             <SingleCollection key={collection[0]} title = {collection[0]} collection = {collection} />
          )))}
