@@ -1,6 +1,5 @@
 import FormBuilder from "."
 import ReactDOM from 'react-dom'
-import { fireEvent } from "@testing-library/react"
 
 
 describe('Form builder component tests', () => {
