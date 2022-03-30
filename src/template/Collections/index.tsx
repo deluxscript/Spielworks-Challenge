@@ -9,7 +9,7 @@ interface NameProp {
    accountName?: string
 }
 
-const Collections: React.FC<NameProp> = ({accountName}) => {
+const Collections: React.VFC<NameProp> = ({accountName}) => {
 
    const [NftData, setNftData] = useState<Assets[]>([]);
    

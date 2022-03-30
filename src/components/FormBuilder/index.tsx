@@ -7,7 +7,7 @@ interface Values {
    accountName: string
 }
 
-const FormBuilder: React.FC = () => {
+const FormBuilder: React.VFC = () => {
 
    const [name, setName] = useState<Values>()
    const { register, handleSubmit, formState } = useForm<Values>()

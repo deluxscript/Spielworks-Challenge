@@ -6,7 +6,7 @@ interface Props {
    title: string
 }
 
-const SingleCollection: React.FC<Props> = ({collection, title})=> {
+const SingleCollection: React.VFC<Props> = ({collection, title})=> {
    const Items:any = Object.values(collection)[1]
 
    return(

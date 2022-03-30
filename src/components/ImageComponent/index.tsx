@@ -1,16 +1,13 @@
 import { useState } from "react"
 import { BallTriangle } from 'react-loading-icons'
-
-
 interface Props {
    img: string
 }
-const ImageComponent: React.FC<Props> = ({img}) => {
+const ImageComponent: React.VFC<Props> = ({img}) => {
 
    const [imageLoad, setImageLoad] = useState(false)
-
    const isLoaded: any = () => setImageLoad(true)
-   console.log(imageLoad)
+
    return(
       <div className="h-275 shadow-md">
          {

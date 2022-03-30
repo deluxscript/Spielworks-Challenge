@@ -6,7 +6,7 @@ interface Props {
 }
 
 
-const Cards: React.FC<Props> = ({Item}) => {
+const Cards: React.VFC<Props> = ({Item}) => {
 
    const { data : {img}, name, template_mint } = Item
 
