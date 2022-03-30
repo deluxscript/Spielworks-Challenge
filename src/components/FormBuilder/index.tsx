@@ -17,12 +17,6 @@ const FormBuilder: React.FC = () => {
          setName(accountName)
       });
    }
-   // const onSubmit = handleSubmit((accountName) => {
-   //    setName(accountName)
-   //    return new Promise(resolve => {
-   //       setTimeout(resolve, 2000);
-   //   });
-   // })
    const accountName = name?.accountName
    
    return (
